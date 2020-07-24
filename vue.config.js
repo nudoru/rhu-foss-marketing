@@ -4,6 +4,7 @@ module.exports = {
   // devServer: {
   //   proxy: '',
   // },
+  publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
   css: {
     loaderOptions: {
       sass: {
