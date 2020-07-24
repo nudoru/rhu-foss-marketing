@@ -1,0 +1,119 @@
+.progress-donut {
+  // display: inline-block;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &.label-bottom {
+    .label {
+      margin: 0;
+      margin-top: $base-value-quarter;
+    }
+    .donut-chart {
+      text-align: center;
+    }
+  }
+
+  &.label-top {
+    .label {
+      order: 0;
+      margin: 0;
+      margin-bottom: $base-value-quarter;
+    }
+    .donut-chart {
+      order: 1;
+      text-align: center;
+    }
+  }
+
+  &.label-right {
+    flex-direction: row;
+    .label {
+      margin: 0;
+      margin-left: $base-value-half;
+    }
+    .donut-chart {
+      flex-shrink: 1;
+      flex-grow: 1;
+    }
+  }
+
+  &.label-left {
+    flex-direction: row;
+    .label {
+      order: 0;
+      margin: 0;
+      margin-right: $base-value-half;
+    }
+    .donut-chart {
+      order: 1;
+      flex-shrink: 1;
+      flex-grow: 1;
+    }
+  }
+
+  // span
+  .label {
+    @extend .control-label;
+    width: 100%;
+    margin-top: $base-value-quarter;
+    text-align: center;
+    white-space: normal;
+    color: $neutral-color-dark;
+    text-shadow: $shadow-text-light;
+  }
+
+  // svg
+  .donut-chart {
+    position: relative;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 100%;
+
+    .wrapped-component {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      //top: 50%;
+      //transform: translateY(-50%);
+      //height: 100%;
+    }
+
+    svg {
+      z-index: 0;
+      .track {
+        fill: transparent;
+        stroke: $grey1;
+        stroke-width: 26;
+      }
+      .indicator {
+        fill: transparent;
+        stroke-width: 26;
+        stroke-dasharray: 0 10000;
+        //stroke: $primary-color;
+      }
+      .center-circle {
+        fill: $grey0;
+        stroke: none;
+      }
+      .center {
+        font-family: $font-family-base;
+        fill: $primary-color-dark;
+        font-size: $font-size-small;
+        font-weight: $font-weight-light;
+      }
+    }
+
+    @each $status, $color in $statusColor {
+      &.#{$status} {
+        .center {
+          fill: map-get($statusColorBlack, $status);
+        }
+      }
+    }
+  }
+}
