@@ -3,9 +3,8 @@
 <template>
   <main class="app">
     <Header
-      ><h1><i class="far fa-lightbulb"></i>RHU</h1>
-      <h2>Starter</h2></Header
-    >
+      ><h1><i class="far fa-lightbulb"></i>Open Learning Platform</h1>
+    </Header>
     <Content>
       <Home />
     </Content>
