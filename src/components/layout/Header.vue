@@ -10,15 +10,17 @@ export default {
       default: false
     }
   },
+/*\<div class="end">
+                  <AppNavigation/>
+                </div>
+*/
+
   render(h, context) {
     return (
             <section role="banner" class="app-header">
               <div class="container-horizontal">
                 <div>
                   {context.children}
-                </div>
-                <div class="end">
-                  <AppNavigation/>
                 </div>
               </div>
             </section>

@@ -1,31 +1,34 @@
 <style lang="scss" scoped>
-  .Home{}
+.Home {
+}
 </style>
 
 <template>
   <div>
-  <Hero/>
-  <div class='container'>
-    <h1>Hello world!</h1>
-  </div>
+    <Hero>
+      <h1>Hi</h1>
+    </Hero>
+    <div class="container">
+      <h1>Hello world!</h1>
+    </div>
   </div>
 </template>
 
 <script>
-  import Hero from "../components/layout/Hero";
-  export default {
-    name: 'Home',
-    components: {Hero},
-    props: {
-      p: {
-        type: Boolean,
-        default: false
-      }
+import Hero from '../components/layout/Hero';
+export default {
+  name: 'Home',
+  components: { Hero },
+  props: {
+    p: {
+      type: Boolean,
+      default: false,
     },
-    data() {
-      return {};
-    },
-    computed: {},
-    methods: {}
-  };
+  },
+  data() {
+    return {};
+  },
+  computed: {},
+  methods: {},
+};
 </script>
