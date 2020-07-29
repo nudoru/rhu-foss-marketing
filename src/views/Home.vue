@@ -1,32 +1,19 @@
 <style lang="scss" scoped>
-.feature {
-  text-align: center;
-  font-size: $scale3;
-  i[class^='fa'] {
-    display: block;
-    font-size: $scale7;
-    margin-bottom: 1rem;
-  }
-  em {
-    display: block;
-    font-size: $scale-2;
-    font-style: normal;
-  }
-}
+
 </style>
 
 <template>
   <div>
     <Hero>
-      <h1>Open for learning.</h1>
-      <h2>
+      <h1>Open for learning</h1>
+      <h2 class="light">
         The Open Learning Platform, an open source learning experience platform
         (LXP) solution that helps [who] achieve both freedom to learn and
         freedom to innovate.
       </h2>
     </Hero>
     <div class="container">
-      <h1 class="text-center">
+      <h1 class="text-center light">
         Make learning your competitive advantage by integrating an award-winning
         open source learning experience platform that empowers organizations
         across the globe to excel. Be open for learning in days — not weeks.
@@ -38,7 +25,7 @@
     </div>
     <div class="container">
       <h1>What is a learning experience platform?</h1>
-      <p>
+      <p class="large">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla
         mauris neque, ut maximus nisi tincidunt nec. Fusce blandit est et augue
         condimentum, suscipit hendrerit leo condimentum. Quisque ullamcorper
@@ -51,7 +38,7 @@
         orci. Sed sagittis ultricies vehicula. Integer eget nisl pretium, mattis
         magna vel, sodales velit. Morbi pretium molestie nulla.
       </p>
-      <p>
+      <p class="large">
         Mauris nec elementum lectus. Class aptent taciti sociosqu ad litora
         torquent per conubia nostra, per inceptos himenaeos. Curabitur in nisl
         ultricies, feugiat felis eget, ultrices elit. Integer condimentum
@@ -72,23 +59,35 @@
     </div>
     <div class="container">
       <h1>Features/benefits</h1>
-      <GridSquare>
-        <span class="feature"><i class="fas fa-users"></i>User-friendly</span>
-        <span class="feature"><i class="fab fa-osi"></i>Open source</span>
-        <span class="feature"
-          ><i class="fas fa-cogs"></i>Integrates with popular systems
-          <em>(LMS, LinkedIn Learning, Allego, Kaltura, etc)</em></span
-        >
-        <span class="feature"
-          ><i class="fas fa-binoculars"></i>Track learner progress</span
-        >
-        <span class="feature"
-          ><i class="fas fa-child"></i>Engaging learner experience</span
-        >
-        <span class="feature"
-          ><i class="fas fa-chart-bar"></i>Measure impact</span
-        >
-      </GridSquare>
+      <div class="feature-grid">
+        <FeatureCard>
+          <span class="icon"><i class="fas fa-users"></i></span>
+          <span class="title">User-friendly</span>
+        </FeatureCard>
+        <FeatureCard>
+          <span class="icon"><i class="fab fa-osi"></i></span>
+          <span class="title">Open source</span>
+        </FeatureCard>
+        <FeatureCard>
+          <span class="icon"><i class="fas fa-cogs"></i></span>
+          <span class="title">Integrates with popular systems
+          <em>(LMS, LinkedIn Learning, Allego, Kaltura, etc)</em></span>
+        </FeatureCard>
+        <FeatureCard>
+          <span class="icon"><i class="fas fa-binoculars"></i></span>
+          <span class="title">Track learner progress</span>
+        </FeatureCard>
+        <FeatureCard>
+          <span class="icon"><i class="fas fa-child"></i></span>
+          <span class="title">Engaging learner experience</span>
+        </FeatureCard>
+        <FeatureCard>
+          <span class="icon"><i class="fas fa-chart-bar"></i></span>
+          <span class="title">Measure impact</span>
+        </FeatureCard>
+      </div>
+
+
     </div>
     <div class="container">
       <h1>What people are saying</h1>
@@ -106,8 +105,8 @@
         experience platform that will continue to deliver value to the
         business.”
       </blockquote>
-      <p class="small text-right">
-        Tesh Patel, Director, Learning Technologies and Platforms
+      <p class="caption">
+        <em>Tesh Patel</em>, Director, Learning Technologies and Platforms
       </p>
     </div>
   </div>
@@ -115,10 +114,11 @@
 
 <script>
 import Hero from '../components/layout/Hero';
-import GridSquare from '../components/ui/molecules/GridSquare';
+import GridAuto from '../components/ui/molecules/GridAuto';
+import FeatureCard from "@/components/ui/molecules/FeatureCard";
 export default {
   name: 'Home',
-  components: { Hero, GridSquare },
+  components: {FeatureCard, Hero, GridAuto },
   props: {
     p: {
       type: Boolean,

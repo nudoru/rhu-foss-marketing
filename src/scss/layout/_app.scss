@@ -38,10 +38,16 @@
     .start {
       flex: 1;
       text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
     }
     .end {
-      flex: 1;
+      //flex: 1;
       text-align: right;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
     }
   }
   .container-full {

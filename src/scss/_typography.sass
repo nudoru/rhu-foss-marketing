@@ -88,13 +88,24 @@ p, ul, ol, li, pre, td, th, dl, dd, dt, label, legend
 p, ul, ol, blockquote
   margin-bottom: $scale2
 
-blockquote
-  background-color: $neutral-color-light
-  border-radius: $radius-base
-  margin: 0
-  padding: $scale2
-  padding-left: $scale0
+small, .small
+  @extend p
+  font-size: $font-size-small
+  line-height: $scale2
+
+large, .large
+  @extend p
   font-size: $font-size-large
+  line-height: $scale7
+
+blockquote
+  @extend .large
+  background-color: $neutral-color-light
+  //border-radius: $radius-base
+  margin: $scale10 0
+  padding: $scale5
+  //padding-left: $scale0
+  border-left: 3px solid $primary-color
 
 pre
   font-family: $font-family-mono
@@ -115,10 +126,17 @@ strong
 em
   font-style: italic
 
-small, .small
+.light
+  font-weight: $font-weight-light
+
+.caption
   @extend p
-  font-size: $font-size-small
-  line-height: $scale2
+  font-size: .9rem
+  text-align: right
+  margin: 0
+  em
+    font-style: normal
+    font-weight: $font-weight-bold
 
 ul, ol
   padding-left: 0

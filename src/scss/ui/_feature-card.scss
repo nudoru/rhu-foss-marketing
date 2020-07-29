@@ -1,0 +1,38 @@
+.feature-grid {
+  display: grid;
+  grid-gap: $base-value-quarter;
+  grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+}
+
+.feature-card {
+  position: relative;
+  text-align: center;
+  font-size: $scale3;
+  width: 100%;
+  height: 300px;
+  background: #eee;
+  padding: $scale5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .icon {
+    display: block;
+    margin-bottom: $scale4;
+    i[class^='fa'] {
+      font-size: $scale12;
+      color: $secondary-color;
+    }
+  }
+  .title {
+    @extend .large;
+    em {
+      @extend p;
+      margin-top: $scale3;
+      margin-bottom: 0;
+      display: block;
+      font-style: normal;
+    }
+  }
+
+}

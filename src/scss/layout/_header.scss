@@ -1,6 +1,7 @@
 .app-header {
   @extend .band;
-  @extend .shadow-md;
+  @extend .shadow-sm;
+  @include transition-all();
   grid-area: header;
   background-color: #000;
   color: #fff;
@@ -8,6 +9,11 @@
   top: 0;
   z-index: $zindex-header;
   min-height: 51px; // contain mobile menu button
+  &.scrolled {
+    @extend .shadow-md;
+    opacity: .8;
+    backdrop-filter: blur(8px) saturate(120%);
+  }
   .container-horizontal {
     .end {
       flex: unset;
@@ -34,6 +40,15 @@
     }
     p {
       margin: 0;
+    }
+    .svg-logo {
+      display: inline-block;
+      svg {
+        display: block;
+        height: 35px;
+        fill: white;
+      }
+
     }
   }
 }

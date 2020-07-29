@@ -2,8 +2,14 @@
 
 <template>
   <main class="app">
-    <Header
-      ><h1><i class="far fa-lightbulb"></i>Open Learning Platform</h1>
+    <Header>
+      <span class="start">
+        <span v-html='logo' class="svg-logo"></span>
+      </span>
+      <span class="end">
+        <button style="margin-right: 1rem">Get started</button>
+        <button class="secondary">Demo</button>
+      </span>
     </Header>
     <Content>
       <Home />
@@ -18,6 +24,7 @@ import Header from './components/layout/Header.vue';
 import Content from './components/layout/Content';
 import Home from './views/Home';
 import Footer from './components/layout/Footer';
+import Logo from './assets/images/olp-logo.svg';
 
 export default {
   name: 'App',
@@ -28,7 +35,9 @@ export default {
     Footer,
   },
   data() {
-    return {};
+    return {
+      logo: Logo
+    };
   },
   methods: {},
   mounted() {
