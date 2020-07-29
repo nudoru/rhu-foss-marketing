@@ -1,10 +1,13 @@
 .feature-grid {
+  position: relative;
   display: grid;
   grid-gap: $base-value-quarter;
   grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
 }
 
 .feature-card {
+  @include transition-all;
+  overflow: hidden;
   position: relative;
   text-align: center;
   font-size: $scale3;
@@ -17,6 +20,7 @@
   justify-content: center;
   flex-direction: column;
   .icon {
+    @include transition-all;
     display: block;
     margin-bottom: $scale4;
     i[class^='fa'] {
@@ -26,13 +30,28 @@
   }
   .title {
     @extend .large;
-    em {
-      @extend p;
-      margin-top: $scale3;
-      margin-bottom: 0;
+  }
+  .description {
+    @include transition-all;
+    @extend p;
+    display: absolute;
+    // opacity: 0;
+    margin: 0;
+    font-style: normal;
+    bottom: 0;
+  }
+  &:hover {
+    @extend .shadow-md;
+    transform: scale(1.05);
+    z-index: 1;
+    background-color: $primary-color-light;
+    .icon {
+      transform: scale(1.2) translateY(-1rem);
+    }
+    .description {
       display: block;
-      font-style: normal;
+      opacity: 1;
+      transform: translateY(1rem);
     }
   }
-
 }

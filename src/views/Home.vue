@@ -1,6 +1,4 @@
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
 
 <template>
   <div>
@@ -70,8 +68,10 @@
         </FeatureCard>
         <FeatureCard>
           <span class="icon"><i class="fas fa-cogs"></i></span>
-          <span class="title">Integrates with popular systems
-          <em>(LMS, LinkedIn Learning, Allego, Kaltura, etc)</em></span>
+          <span class="title">Integrates with popular systems</span>
+          <span class="description"
+            >(LMS, LinkedIn Learning, Allego, Kaltura, etc)</span
+          >
         </FeatureCard>
         <FeatureCard>
           <span class="icon"><i class="fas fa-binoculars"></i></span>
@@ -86,8 +86,6 @@
           <span class="title">Measure impact</span>
         </FeatureCard>
       </div>
-
-
     </div>
     <div class="container">
       <h1>What people are saying</h1>
@@ -115,10 +113,10 @@
 <script>
 import Hero from '../components/layout/Hero';
 import GridAuto from '../components/ui/molecules/GridAuto';
-import FeatureCard from "@/components/ui/molecules/FeatureCard";
+import FeatureCard from '@/components/ui/molecules/FeatureCard';
 export default {
   name: 'Home',
-  components: {FeatureCard, Hero, GridAuto },
+  components: { FeatureCard, Hero, GridAuto },
   props: {
     p: {
       type: Boolean,
