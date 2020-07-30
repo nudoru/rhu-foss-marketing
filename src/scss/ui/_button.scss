@@ -21,13 +21,15 @@
     font-size: $font-size-normal;
     text-transform: none;
     height: $control-height-large;
+    color: #fff;
   }
   &.toggle {
   }
   &.toggled-on {
     border: 2px solid $primary-color-dark;
   }
-  &.toggled-off {}
+  &.toggled-off {
+  }
 
   &:hover {
     background: $button-primary-color-over;
@@ -36,7 +38,6 @@
     color: #fff;
     text-decoration: none;
   }
-
 }
 
 @mixin button-variant($faceColor, $textColor: false) {
@@ -64,7 +65,8 @@
   &.toggled-on {
     background-color: adj-darker($faceColor, 5, 5%, 5);
     border: 2px solid $faceOverColor;
-    box-shadow: inset 2px 2px 3px adj-darker($faceColor, 15, 5%, 5), 0 2px 0 adj-darker($faceColor, 15, 5%, 5);
+    box-shadow: inset 2px 2px 3px adj-darker($faceColor, 15, 5%, 5),
+      0 2px 0 adj-darker($faceColor, 15, 5%, 5);
   }
 
   &.outline {
@@ -86,8 +88,8 @@
     border-color: $outlineColor;
     color: $textColor;
     &.toggled-on {
-      background-color: rgba($textColor, .1);
-      box-shadow: inset 2px 2px 3px rgba(adj-darker($textColor, 15, 5%, 5), .5);
+      background-color: rgba($textColor, 0.1);
+      box-shadow: inset 2px 2px 3px rgba(adj-darker($textColor, 15, 5%, 5), 0.5);
     }
     &:hover {
       background: $faceOverColor;
@@ -98,16 +100,16 @@
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   @extend .button;
   @include button-variant($button-primary-color, white);
 
-  i[class^="fa"].left {
+  i[class^='fa'].left {
     margin-right: $base-value-half;
   }
-  i[class^="fa"].right {
+  i[class^='fa'].right {
     margin-left: $base-value-half;
   }
 
@@ -139,8 +141,6 @@ button,
       @extend .control-border-style-disabled;
     }
   }
-
-
 }
 
 .button-stack-horizontal-spaced {
@@ -184,7 +184,7 @@ button,
     text-align: left;
   }
   button:first-of-type {
-    border-radius: $radius-base $radius-base 0 0 ;
+    border-radius: $radius-base $radius-base 0 0;
   }
   button:last-of-type {
     border-radius: 0 0 $radius-base $radius-base;

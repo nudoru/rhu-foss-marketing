@@ -11,17 +11,6 @@
       </h2>
     </Hero>
     <div class="container">
-      <h1 class="text-center light">
-        Make learning your competitive advantage by integrating an award-winning
-        open source learning experience platform that empowers organizations
-        across the globe to excel. Be open for learning in days — not weeks.
-      </h1>
-      <div class="flex-group-row">
-        <button>Get started</button>
-        <button class="secondary">Demo</button>
-      </div>
-    </div>
-    <div class="container">
       <h1>What is a learning experience platform?</h1>
       <p class="large">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla
@@ -59,64 +48,99 @@
       <h1>Features/benefits</h1>
       <div class="feature-grid">
         <FeatureCard>
-          <span class="icon"><i class="fas fa-users"></i></span>
-          <span class="title">User-friendly</span>
+          <div class="content">
+            <span class="icon"><i class="fas fa-users"></i></span>
+            <span class="title">User-friendly</span>
+          </div>
         </FeatureCard>
         <FeatureCard>
-          <span class="icon"><i class="fab fa-osi"></i></span>
-          <span class="title">Open source</span>
+          <div class="content">
+            <span class="icon"><i class="fab fa-osi"></i></span>
+            <span class="title">Open source</span>
+          </div>
         </FeatureCard>
         <FeatureCard>
-          <span class="icon"><i class="fas fa-cogs"></i></span>
-          <span class="title">Integrates with popular systems</span>
-          <span class="description"
-            >(LMS, LinkedIn Learning, Allego, Kaltura, etc)</span
-          >
+          <div class="content">
+            <span class="icon"><i class="fas fa-cogs"></i></span>
+            <span class="title">Integrates with popular systems</span>
+            <span class="description"
+              >Totara Learn, LinkedIn Learning, Allego, and Kaltura</span
+            >
+          </div>
         </FeatureCard>
         <FeatureCard>
-          <span class="icon"><i class="fas fa-binoculars"></i></span>
-          <span class="title">Track learner progress</span>
+          <div class="content">
+            <span class="icon"><i class="fas fa-binoculars"></i></span>
+            <span class="title">Track learner progress</span>
+          </div>
         </FeatureCard>
         <FeatureCard>
-          <span class="icon"><i class="fas fa-child"></i></span>
-          <span class="title">Engaging learner experience</span>
+          <div class="content">
+            <span class="icon"><i class="fas fa-child"></i></span>
+            <span class="title">Engaging learner experience</span>
+          </div>
         </FeatureCard>
         <FeatureCard>
-          <span class="icon"><i class="fas fa-chart-bar"></i></span>
-          <span class="title">Measure impact</span>
+          <div class="content">
+            <span class="icon"><i class="fas fa-chart-bar"></i></span>
+            <span class="title">Measure impact</span>
+          </div>
         </FeatureCard>
       </div>
     </div>
     <div class="container">
       <h1>What people are saying</h1>
-      <blockquote>
-        “Red Hat is not only an open source software company but our core
-        culture exudes open collaboration. Deploying Totara Learn was a huge
-        step in moving to an open LMS platform. As we thought about the next
-        chapter in our journey, we knew we needed to create an open learning
-        ecosystem. A system that would allow us to continue to mold the learner
-        experience to our unique needs and a platform that would mask the
-        complexity of the many Learning tools we use to craft a rich learning
-        experience. That was the inception of the Red Hat University and we were
-        fortunate to find a partner in Synegen that was able to leverage the
-        openness of Totara Learn's API, and help us build an open learning
-        experience platform that will continue to deliver value to the
-        business.”
-      </blockquote>
+      <div class="testimonial" style="margin-top: 2rem;">
+        <div class="avatar">
+          <Avatar
+            size="xl"
+            status="primary"
+            imgUrl="https://images.pexels.com/photos/839586/pexels-photo-839586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=500"
+          />
+        </div>
+        <div class="message right">
+          <blockquote>
+            “Red Hat is not only an open source software company but our core
+            culture exudes open collaboration. Deploying Totara Learn was a huge
+            step in moving to an open LMS platform. As we thought about the next
+            chapter in our journey, we knew we needed to create an open learning
+            ecosystem. A system that would allow us to continue to mold the
+            learner experience to our unique needs and a platform that would
+            mask the complexity of the many Learning tools we use to craft a
+            rich learning experience. That was the inception of the Red Hat
+            University and we were fortunate to find a partner in Synegen that
+            was able to leverage the openness of Totara Learn's API, and help us
+            build an open learning experience platform that will continue to
+            deliver value to the business.”
+          </blockquote>
+        </div>
+      </div>
+
       <p class="caption">
         <em>Tesh Patel</em>, Director, Learning Technologies and Platforms
       </p>
+    </div>
+    <div class="container">
+      <h1 class="text-center light">
+        Make learning your competitive advantage by integrating an award-winning
+        open source learning experience platform that empowers organizations
+        across the globe to excel. Be open for learning in days — not weeks.
+      </h1>
+      <div class="flex-group-row">
+        <button class="large">Get started</button>
+        <button class="large secondary">Demo</button>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import Hero from '../components/layout/Hero';
-import GridAuto from '../components/ui/molecules/GridAuto';
 import FeatureCard from '@/components/ui/molecules/FeatureCard';
+import Avatar from '../components/ui/atoms/Avatar';
 export default {
   name: 'Home',
-  components: { FeatureCard, Hero, GridAuto },
+  components: { FeatureCard, Hero, Avatar },
   props: {
     p: {
       type: Boolean,
