@@ -9,12 +9,9 @@
   top: 0;
   z-index: $zindex-header;
   min-height: 51px; // contain mobile menu button
-  &.scrolled {
-    @extend .shadow-md;
-    opacity: 0.9;
-    backdrop-filter: blur(8px) saturate(120%);
-  }
+  backdrop-filter: blur(8px) saturate(120%);
   .container-horizontal {
+    padding: 2rem 1rem;
     .end {
       flex: unset;
     }
@@ -48,6 +45,13 @@
         height: 35px;
         fill: white;
       }
+    }
+  }
+  &.scrolled {
+    @extend .shadow-md;
+    background-color: rgba(black, 0.85);
+    .container-horizontal {
+      padding: 1rem 1rem;
     }
   }
 }

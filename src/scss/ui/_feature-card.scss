@@ -7,25 +7,25 @@
 
 .feature-card {
   @include transition-all;
+  @include content-gradient($primary-color, $secondary-color);
   overflow: hidden;
   position: relative;
   text-align: center;
   font-size: $scale3;
   width: 100%;
   height: 300px;
-  background: #eee;
   padding: $scale5;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: white;
   .icon {
     @include transition-all;
     display: block;
     margin-bottom: $scale4;
     i[class^='fa'] {
       font-size: $scale12;
-      color: $secondary-color;
     }
   }
   .title {
@@ -44,7 +44,7 @@
     @extend .shadow-md;
     transform: scale(1.05);
     z-index: 1;
-    background-color: $primary-color-light;
+    @include content-gradient($primary-color, $secondary-color-dark);
     .icon {
       transform: scale(1.2) translateY(-1rem);
     }
