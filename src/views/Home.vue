@@ -1,7 +1,24 @@
 <style lang="scss">
+.container {
+  h1 {
+    margin-bottom: 3rem;
+  }
+}
 .svg-totarabadge {
   svg {
     width: 150px;
+  }
+}
+.fade-in-section {
+  opacity: 0;
+  transform: scale(0.8) translateY(10vh);
+  visibility: hidden;
+  transition: opacity 0.25s ease-out, transform 0.75s ease-out;
+  will-change: scale, opacity, visibility;
+  &.visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
   }
 }
 </style>
@@ -43,7 +60,7 @@
         Duis porttitor lectus quis urna porttitor, quis sodales risus congue.
         Sed vitae urna ac augue sagittis mollis.
       </p>
-      <div class="flex-group-row">
+      <div class="flex-group-row fade-in-section">
         <div>
           <span v-html="totarabadge" class="svg-totarabadge"></span>
         </div>
@@ -57,7 +74,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container fade-in-section">
       <h1>Features/benefits</h1>
       <div class="feature-grid">
         <FeatureCard>
@@ -108,7 +125,7 @@
         </FeatureCard>
       </div>
     </div>
-    <div class="container">
+    <div class="container fade-in-section">
       <h1>What people are saying</h1>
       <div class="testimonial" style="margin-top: 2rem;">
         <div class="avatar">
@@ -141,7 +158,7 @@
         Technologies and Platforms
       </p>
     </div>
-    <div class="container">
+    <div class="container fade-in-section">
       <h1 class="text-center light mb-ms12">
         Make learning your competitive advantage by integrating an award-winning
         open source learning experience platform that empowers organizations
@@ -158,6 +175,9 @@
 </template>
 
 <script>
+import { debounce } from '@/components/libs/uiComponentUtilities';
+import { addClass } from '@/components/libs/dom';
+
 import Hero from '../components/layout/Hero';
 import FeatureCard from '@/components/ui/molecules/FeatureCard';
 import Avatar from '../components/ui/atoms/Avatar';
@@ -169,6 +189,25 @@ import Integrate from '../assets/images/api.svg';
 import TrackProgress from '../assets/images/abacus.svg';
 import Engaging from '../assets/images/abacus.svg';
 import Measure from '../assets/images/mag-charts.svg';
+
+let fadeInElements;
+
+const handleScroll = (evt) => {
+  for (let i = 0; i < fadeInElements.length; i++) {
+    let el = fadeInElements[i];
+    if (isElemVisible(el)) {
+      addClass(el, 'visible');
+      fadeInElements.splice(i, 1);
+    }
+  }
+};
+
+const isElemVisible = (el) => {
+  let rect = el.getBoundingClientRect(),
+    elemTop = rect.top + 100,
+    elemBottom = rect.bottom;
+  return elemTop < window.innerHeight && elemBottom >= 0;
+};
 
 export default {
   name: 'Home',
@@ -192,5 +231,15 @@ export default {
   },
   computed: {},
   methods: {},
+  mounted() {
+    fadeInElements = Array.from(
+      document.getElementsByClassName('fade-in-section')
+    );
+
+    document.addEventListener('scroll', debounce(handleScroll), {
+      passive: true,
+    });
+    handleScroll();
+  },
 };
 </script>
