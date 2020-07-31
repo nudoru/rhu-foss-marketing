@@ -1,4 +1,10 @@
-<style lang="scss" scoped></style>
+<style lang="scss">
+.svg-totarabadge {
+  svg {
+    width: 150px;
+  }
+}
+</style>
 
 <template>
   <div>
@@ -37,12 +43,19 @@
         Duis porttitor lectus quis urna porttitor, quis sodales risus congue.
         Sed vitae urna ac augue sagittis mollis.
       </p>
-      <blockquote>
-        This innovative open source platform, winner of the 2019 Totara Best
-        Technology and Media project award, was created in a Red Hat-Synegen
-        partnership. Proving that innovation drives collaboration...Insert more
-        about partnership here...
-      </blockquote>
+      <div class="flex-group-row">
+        <div>
+          <span v-html="totarabadge" class="svg-totarabadge"></span>
+        </div>
+        <div style="flex: 1; margin-left: 2rem;">
+          <blockquote>
+            This innovative open source platform, winner of the 2019 Totara Best
+            Technology and Media project award, was created in a Red Hat-Synegen
+            partnership. Proving that innovation drives collaboration...Insert
+            more about partnership here...
+          </blockquote>
+        </div>
+      </div>
     </div>
     <div class="container">
       <h1>Features/benefits</h1>
@@ -117,17 +130,20 @@
       </div>
 
       <p class="caption">
-        <em>Tesh Patel</em>, Director, Learning Technologies and Platforms
+        <em class="text-primary">Tesh Patel</em>, Director, Learning
+        Technologies and Platforms
       </p>
     </div>
     <div class="container">
-      <h1 class="text-center light">
+      <h1 class="text-center light mb-ms12">
         Make learning your competitive advantage by integrating an award-winning
         open source learning experience platform that empowers organizations
         across the globe to excel. Be open for learning in days — not weeks.
       </h1>
-      <div class="flex-group-row">
-        <button class="large">Get started</button>
+      <div class="flex-group-row-c">
+        <button class="success large" style="margin-right: 2rem;">
+          Get started
+        </button>
         <button class="large secondary">Demo</button>
       </div>
     </div>
@@ -138,6 +154,7 @@
 import Hero from '../components/layout/Hero';
 import FeatureCard from '@/components/ui/molecules/FeatureCard';
 import Avatar from '../components/ui/atoms/Avatar';
+import TotaraBadge from '../assets/images/Totara-Badges_2019_Best-Technology-Media.svg';
 export default {
   name: 'Home',
   components: { FeatureCard, Hero, Avatar },
@@ -148,7 +165,9 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      totarabadge: TotaraBadge,
+    };
   },
   computed: {},
   methods: {},

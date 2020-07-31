@@ -4,18 +4,17 @@
   <main class="app">
     <Header>
       <span class="start">
-        <span v-html='logo' class="svg-logo"></span>
+        <span v-html="logo" class="svg-logo"></span>
       </span>
       <span class="end">
-        <button style="margin-right: 1rem">Get started</button>
+        <button class="success" style="margin-right: 1rem;">Get started</button>
         <button class="secondary">Demo</button>
       </span>
     </Header>
     <Content>
       <Home />
     </Content>
-
-    <Footer />
+    <!-- <Footer /> -->
   </main>
 </template>
 
@@ -36,7 +35,7 @@ export default {
   },
   data() {
     return {
-      logo: Logo
+      logo: Logo,
     };
   },
   methods: {},

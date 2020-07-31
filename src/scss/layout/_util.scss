@@ -147,6 +147,14 @@
   flex-wrap: wrap;
 }
 
+.flex-group-row-c {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .flex-group-col {
   display: flex;
   flex-direction: column;
