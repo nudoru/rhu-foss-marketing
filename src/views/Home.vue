@@ -62,19 +62,22 @@
       <div class="feature-grid">
         <FeatureCard>
           <div class="content">
-            <span class="icon"><i class="fas fa-users"></i></span>
+            <span class="icon"><i class="far fa-smile-beam"></i></span>
+            <!-- <span v-html="userfriendly" class="icon"></span> -->
             <span class="title">User-friendly</span>
           </div>
         </FeatureCard>
         <FeatureCard>
           <div class="content">
-            <span class="icon"><i class="fab fa-osi"></i></span>
+            <span class="icon"><i class="fas fa-box-open"></i></span>
+            <!-- <span v-html="opensource" class="icon"></span> -->
             <span class="title">Open source</span>
           </div>
         </FeatureCard>
         <FeatureCard>
           <div class="content">
             <span class="icon"><i class="fas fa-cogs"></i></span>
+            <!-- <span v-html="integrate" class="icon"></span> -->
             <span class="title">Integrates with popular systems</span>
             <span class="description"
               >Totara Learn, LinkedIn Learning, Allego, and Kaltura</span
@@ -84,18 +87,22 @@
         <FeatureCard>
           <div class="content">
             <span class="icon"><i class="fas fa-binoculars"></i></span>
+            <!-- <span v-html="trackprogress" class="icon"></span> -->
             <span class="title">Track learner progress</span>
           </div>
         </FeatureCard>
         <FeatureCard>
           <div class="content">
-            <span class="icon"><i class="fas fa-child"></i></span>
+            <!-- <span class="icon"><i class="fas fa-child"></i></span> -->
+            <span class="icon"><i class="fas fa-user-astronaut"></i></span>
+            <!-- <span v-html="engaging" class="icon"></span> -->
             <span class="title">Engaging learner experience</span>
           </div>
         </FeatureCard>
         <FeatureCard>
           <div class="content">
             <span class="icon"><i class="fas fa-chart-bar"></i></span>
+            <!-- <span v-html="measure" class="icon"></span> -->
             <span class="title">Measure impact</span>
           </div>
         </FeatureCard>
@@ -155,6 +162,14 @@ import Hero from '../components/layout/Hero';
 import FeatureCard from '@/components/ui/molecules/FeatureCard';
 import Avatar from '../components/ui/atoms/Avatar';
 import TotaraBadge from '../assets/images/Totara-Badges_2019_Best-Technology-Media.svg';
+
+import UserFriendly from '../assets/images/skateboard.svg';
+import OpenSource from '../assets/images/connected.svg';
+import Integrate from '../assets/images/api.svg';
+import TrackProgress from '../assets/images/abacus.svg';
+import Engaging from '../assets/images/abacus.svg';
+import Measure from '../assets/images/mag-charts.svg';
+
 export default {
   name: 'Home',
   components: { FeatureCard, Hero, Avatar },
@@ -167,6 +182,12 @@ export default {
   data() {
     return {
       totarabadge: TotaraBadge,
+      userfriendly: UserFriendly,
+      opensource: OpenSource,
+      integrate: Integrate,
+      trackprogress: TrackProgress,
+      engaging: Engaging,
+      measure: Measure,
     };
   },
   computed: {},
