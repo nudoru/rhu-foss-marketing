@@ -11,9 +11,7 @@
         <button class="secondary">Demo</button>
       </span>
     </Header>
-    <Content>
-      <Home />
-    </Content>
+    <Home />
     <!-- <Footer /> -->
   </main>
 </template>

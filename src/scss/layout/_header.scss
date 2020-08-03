@@ -12,6 +12,7 @@
   height: 120px;
   backdrop-filter: blur(8px) saturate(120%);
   .container-horizontal {
+    height: 100%;
     padding: $scale0;
     .end {
       flex: unset;

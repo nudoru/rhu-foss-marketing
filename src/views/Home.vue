@@ -9,9 +9,21 @@
     width: 150px;
   }
 }
+.container-hero-overlap {
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   width: 100%;
+  //   height: 5rem;
+  //   background: rgba($tertiary-color, 1);
+  //   clip-path: polygon(0% 0, 100% 0, 100% calc(5rem - 50px), 0% 5rem);
+  // }
+}
 .fade-in-section {
   opacity: 0;
-  transform: scale(0.8) translateY(10vh);
+  transform: scale(0.8) translateY(2rem);
   visibility: hidden;
   transition: opacity 0.25s ease-out, transform 0.75s ease-out;
   will-change: scale, opacity, visibility;
@@ -24,7 +36,7 @@
 </style>
 
 <template>
-  <div>
+  <Content>
     <Hero>
       <h1>Open for learning</h1>
       <h2 class="light">
@@ -33,7 +45,7 @@
         freedom to innovate.
       </h2>
     </Hero>
-    <div class="container">
+    <section class="container-hero-overlap">
       <h1>What is a learning experience platform?</h1>
       <p class="large">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla
@@ -60,7 +72,9 @@
         Duis porttitor lectus quis urna porttitor, quis sodales risus congue.
         Sed vitae urna ac augue sagittis mollis.
       </p>
-      <div class="flex-group-row fade-in-section">
+    </section>
+    <section class="container fade-in-section">
+      <div class="flex-group-row">
         <div>
           <span v-html="totarabadge" class="svg-totarabadge"></span>
         </div>
@@ -73,8 +87,8 @@
           </blockquote>
         </div>
       </div>
-    </div>
-    <div class="container fade-in-section">
+    </section>
+    <section class="container fade-in-section">
       <h1>Features/benefits</h1>
       <div class="feature-grid">
         <FeatureCard>
@@ -124,8 +138,8 @@
           </div>
         </FeatureCard>
       </div>
-    </div>
-    <div class="container fade-in-section">
+    </section>
+    <section class="container fade-in-section">
       <h1>What people are saying</h1>
       <div class="testimonial" style="margin-top: 2rem;">
         <div class="avatar">
@@ -157,8 +171,8 @@
         <em class="text-primary">Tesh Patel</em>, Director, Learning
         Technologies and Platforms
       </p>
-    </div>
-    <div class="container fade-in-section">
+    </section>
+    <section class="container fade-in-section">
       <h1 class="text-center light mb-ms12">
         Make learning your competitive advantage by integrating an award-winning
         open source learning experience platform that empowers organizations
@@ -170,14 +184,15 @@
         </button>
         <button class="large secondary">Demo</button>
       </div>
-    </div>
-  </div>
+    </section>
+  </Content>
 </template>
 
 <script>
 import { debounce } from '@/components/libs/uiComponentUtilities';
 import { addClass } from '@/components/libs/dom';
 
+import Content from '../components/layout/Content';
 import Hero from '../components/layout/Hero';
 import FeatureCard from '@/components/ui/molecules/FeatureCard';
 import Avatar from '../components/ui/atoms/Avatar';
@@ -193,13 +208,14 @@ import Measure from '../assets/images/mag-charts.svg';
 let fadeInElements;
 
 const handleScroll = (evt) => {
-  for (let i = 0; i < fadeInElements.length; i++) {
-    let el = fadeInElements[i];
-    if (isElemVisible(el)) {
-      addClass(el, 'visible');
-      fadeInElements.splice(i, 1);
+  fadeInElements = fadeInElements.reduce((acc, c) => {
+    if (isElemVisible(c)) {
+      addClass(c, 'visible');
+    } else {
+      acc.push(c);
     }
-  }
+    return acc;
+  }, []);
 };
 
 const isElemVisible = (el) => {
@@ -211,7 +227,7 @@ const isElemVisible = (el) => {
 
 export default {
   name: 'Home',
-  components: { FeatureCard, Hero, Avatar },
+  components: { Content, FeatureCard, Hero, Avatar },
   props: {
     p: {
       type: Boolean,
@@ -236,6 +252,7 @@ export default {
       document.getElementsByClassName('fade-in-section')
     );
 
+    console.log(fadeInElements);
     document.addEventListener('scroll', debounce(handleScroll), {
       passive: true,
     });

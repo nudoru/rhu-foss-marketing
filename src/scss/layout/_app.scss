@@ -2,10 +2,10 @@
   display: grid;
   grid-template-rows: auto auto 1fr auto;
   grid-template-areas:
-    "header"
-    "hero"
-    "content"
-    "footer";
+    'header'
+    'hero'
+    'content'
+    'footer';
   min-height: 100vh;
 }
 
@@ -14,7 +14,7 @@
   width: 100%;
   max-width: $container-width-max;
   margin: 0 auto;
-  height: 100%;
+  //height: 100%;
 }
 
 .band {
@@ -27,6 +27,26 @@
   .container {
     @extend %app-container;
     padding: 0 $band-container-padding;
+  }
+  .container-hero-overlap {
+    @extend %app-container;
+    // @extend .shadow-lg;
+    padding: $band-container-padding;
+    padding-top: $band-container-padding * 2;
+    margin-top: -5rem;
+    background-color: white;
+    z-index: 1;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 20rem;
+      // background: red;
+      box-shadow: 0 -2rem 30px rgba($primary-color-dark, 0.1);
+    }
   }
   .container-horizontal {
     @extend %app-container;
