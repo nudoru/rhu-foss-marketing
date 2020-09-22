@@ -235,7 +235,6 @@ export default {
       document.getElementsByClassName('fade-in-section')
     );
 
-    console.log(fadeInElements);
     document.addEventListener('scroll', debounce(handleScroll), {
       passive: true,
     });
