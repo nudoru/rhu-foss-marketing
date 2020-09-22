@@ -41,36 +41,19 @@
       <h1>Open for learning</h1>
       <h2 class="light">
         The Open Learning Platform, an open source learning experience platform
-        (LXP) solution that helps [who] achieve both freedom to learn and
-        freedom to innovate.
+        (LXP) solution that helps learning teams achieve both freedom to learn
+        and freedom to innovate.
       </h2>
     </Hero>
     <section class="container-hero-overlap">
       <h1>What is a learning experience platform?</h1>
       <p class="large">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla
-        mauris neque, ut maximus nisi tincidunt nec. Fusce blandit est et augue
-        condimentum, suscipit hendrerit leo condimentum. Quisque ullamcorper
-        rutrum massa id iaculis. Sed quis diam purus. Duis laoreet sem non
-        commodo suscipit. Etiam lectus augue, porttitor eget ex sit amet,
-        faucibus elementum lectus. Cras a ultrices augue. Nunc et ex sapien.
-        Vivamus euismod eleifend tristique. Morbi nec lacus odio. Curabitur
-        massa nisi, maximus vel dolor sed, pulvinar pretium ipsum. Sed sodales
-        nibh eget purus euismod, quis hendrerit libero cursus. Cras eget feugiat
-        orci. Sed sagittis ultricies vehicula. Integer eget nisl pretium, mattis
-        magna vel, sodales velit. Morbi pretium molestie nulla.
-      </p>
-      <p class="large">
-        Mauris nec elementum lectus. Class aptent taciti sociosqu ad litora
-        torquent per conubia nostra, per inceptos himenaeos. Curabitur in nisl
-        ultricies, feugiat felis eget, ultrices elit. Integer condimentum
-        viverra tellus nec ultricies. Cras accumsan tristique aliquam. Maecenas
-        et mi sed quam malesuada rutrum non vitae tellus. Aenean cursus mauris
-        ut metus luctus iaculis. Quisque nulla ante, ultrices sed eros sit amet,
-        gravida volutpat dolor. Proin massa neque, pulvinar nec auctor ut,
-        commodo non ante. Aenean lobortis augue in dui facilisis sollicitudin.
-        Duis porttitor lectus quis urna porttitor, quis sodales risus congue.
-        Sed vitae urna ac augue sagittis mollis.
+        A learning experience platform (LXP) provides a personalized, online
+        learning experience for users, typically employees at large enterprises.
+        It consolidates disparate learning resources into a single portal. These
+        days, learning can happen anywhere and in many forms. An LXP helps
+        employees discover learning opportunities, offers ways to enhance them,
+        and manages all their learning.
       </p>
     </section>
     <section class="container fade-in-section">
@@ -80,10 +63,11 @@
         </div>
         <div style="flex: 1; margin-left: 2rem;">
           <blockquote>
-            This innovative open source platform, winner of the 2019 Totara Best
-            Technology and Media project award, was created in a Red Hat-Synegen
-            partnership. Proving that innovation drives collaboration...Insert
-            more about partnership here...
+            This innovative open source platform, winner of the
+            <a href="https://www.totaralearning.com/customer-stories/red-hat"
+              >2019 Totara Best Technology and Media project award</a
+            >, was created in a Red Hat-Synegen partnership. Proving that
+            innovation drives collaboration.
           </blockquote>
         </div>
       </div>
@@ -93,48 +77,38 @@
       <div class="feature-grid">
         <FeatureCard>
           <div class="content">
-            <span class="icon"><i class="far fa-smile-beam"></i></span>
-            <!-- <span v-html="userfriendly" class="icon"></span> -->
-            <span class="title">User-friendly</span>
-          </div>
-        </FeatureCard>
-        <FeatureCard>
-          <div class="content">
-            <span class="icon"><i class="fas fa-box-open"></i></span>
-            <!-- <span v-html="opensource" class="icon"></span> -->
+            <span v-html="featureIcons[0]" class="icon"></span>
             <span class="title">Open source</span>
           </div>
         </FeatureCard>
         <FeatureCard>
           <div class="content">
-            <span class="icon"><i class="fas fa-cogs"></i></span>
-            <!-- <span v-html="integrate" class="icon"></span> -->
-            <span class="title">Integrates with popular systems</span>
-            <span class="description"
-              >Totara Learn, LinkedIn Learning, Allego, and Kaltura</span
-            >
+            <span v-html="featureIcons[1]" class="icon"></span>
+            <span class="title">Upgrade safe</span>
           </div>
         </FeatureCard>
         <FeatureCard>
           <div class="content">
-            <span class="icon"><i class="fas fa-binoculars"></i></span>
-            <!-- <span v-html="trackprogress" class="icon"></span> -->
-            <span class="title">Track learner progress</span>
+            <span v-html="featureIcons[2]" class="icon"></span>
+            <span class="title">Rapid deployment</span>
           </div>
         </FeatureCard>
         <FeatureCard>
           <div class="content">
-            <!-- <span class="icon"><i class="fas fa-child"></i></span> -->
-            <span class="icon"><i class="fas fa-user-astronaut"></i></span>
-            <!-- <span v-html="engaging" class="icon"></span> -->
-            <span class="title">Engaging learner experience</span>
+            <span v-html="featureIcons[3]" class="icon"></span>
+            <span class="title">Unique experience</span>
           </div>
         </FeatureCard>
         <FeatureCard>
           <div class="content">
-            <span class="icon"><i class="fas fa-chart-bar"></i></span>
-            <!-- <span v-html="measure" class="icon"></span> -->
-            <span class="title">Measure impact</span>
+            <span v-html="featureIcons[4]" class="icon"></span>
+            <span class="title">Extended functionality</span>
+          </div>
+        </FeatureCard>
+        <FeatureCard>
+          <div class="content">
+            <span v-html="featureIcons[5]" class="icon"></span>
+            <span class="title">Easily integrated</span>
           </div>
         </FeatureCard>
       </div>
@@ -143,11 +117,10 @@
       <h1>What people are saying</h1>
       <div class="testimonial" style="margin-top: 2rem;">
         <div class="avatar">
-          <Avatar
-            size="xl"
-            status="primary"
-            imgUrl="https://images.pexels.com/photos/839586/pexels-photo-839586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=500"
-          />
+          <span class="avatar"
+            ><span class="avatar-primary-xl"
+              ><img src="@/assets/images/tesh.jpg" alt="Tesh Patel" /></span
+          ></span>
         </div>
         <div class="message right">
           <blockquote>
@@ -176,7 +149,7 @@
       <h1 class="text-center light mb-ms12">
         Make learning your competitive advantage by integrating an award-winning
         open source learning experience platform that empowers organizations
-        across the globe to excel. Be open for learning in days — not weeks.
+        across the globe to excel. Be open for learning in days —not weeks.
       </h1>
       <div class="flex-group-row-c">
         <button class="success large" style="margin-right: 2rem;">
@@ -184,6 +157,15 @@
         </button>
         <button class="large secondary">Demo</button>
       </div>
+    </section>
+    <section class="container fade-in-section">
+      <p>
+        While Red Hat has partnered with Synegen to create and open source the
+        Open Learning Platform, this is not a supported Red Hat product. For
+        more information or support on this platform please...[Direct them back
+        to Synegen site for Totara Learn subscription and/or advanced
+        assistance.]
+      </p>
     </section>
   </Content>
 </template>
@@ -195,15 +177,14 @@ import { addClass } from '@/components/libs/dom';
 import Content from '../components/layout/Content';
 import Hero from '../components/layout/Hero';
 import FeatureCard from '@/components/ui/molecules/FeatureCard';
-import Avatar from '../components/ui/atoms/Avatar';
 import TotaraBadge from '../assets/images/Totara-Badges_2019_Best-Technology-Media.svg';
 
-import UserFriendly from '../assets/images/skateboard.svg';
-import OpenSource from '../assets/images/connected.svg';
-import Integrate from '../assets/images/api.svg';
-import TrackProgress from '../assets/images/abacus.svg';
-import Engaging from '../assets/images/abacus.svg';
-import Measure from '../assets/images/mag-charts.svg';
+import FeatureIcon1 from '../assets/images/001-coding.svg';
+import FeatureIcon2 from '../assets/images/035-testing.svg';
+import FeatureIcon3 from '../assets/images/040-timer.svg';
+import FeatureIcon4 from '../assets/images/045-diamond.svg';
+import FeatureIcon5 from '../assets/images/023-cms.svg';
+import FeatureIcon6 from '../assets/images/042-solution.svg';
 
 let fadeInElements;
 
@@ -227,7 +208,7 @@ const isElemVisible = (el) => {
 
 export default {
   name: 'Home',
-  components: { Content, FeatureCard, Hero, Avatar },
+  components: { Content, FeatureCard, Hero },
   props: {
     p: {
       type: Boolean,
@@ -237,12 +218,14 @@ export default {
   data() {
     return {
       totarabadge: TotaraBadge,
-      userfriendly: UserFriendly,
-      opensource: OpenSource,
-      integrate: Integrate,
-      trackprogress: TrackProgress,
-      engaging: Engaging,
-      measure: Measure,
+      featureIcons: [
+        FeatureIcon1,
+        FeatureIcon2,
+        FeatureIcon3,
+        FeatureIcon4,
+        FeatureIcon5,
+        FeatureIcon6,
+      ],
     };
   },
   computed: {},
