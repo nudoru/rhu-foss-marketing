@@ -119,6 +119,27 @@
         <div class="avatar">
           <span class="avatar"
             ><span class="avatar-primary-xl"
+              ><img
+                src="@/assets/images/michael.jpg"
+                alt="Michael Cannon" /></span
+          ></span>
+        </div>
+        <div class="message right">
+          <blockquote>
+            “Learning is about sustained behavior change that improves outcomes.
+            It's very hard work. An open source learning infrastructure
+            certainly makes it a little bit easier.”
+          </blockquote>
+        </div>
+      </div>
+      <p class="caption">
+        <em class="text-primary">Michael Cannon</em>, Sr. Director, Red Hat
+        University
+      </p>
+      <div class="testimonial" style="margin-top: 2rem;">
+        <div class="avatar">
+          <span class="avatar"
+            ><span class="avatar-primary-xl"
               ><img src="@/assets/images/tesh.jpg" alt="Tesh Patel" /></span
           ></span>
         </div>
@@ -139,7 +160,6 @@
           </blockquote>
         </div>
       </div>
-
       <p class="caption">
         <em class="text-primary">Tesh Patel</em>, Director, Learning
         Technologies and Platforms
@@ -161,10 +181,7 @@
     <section class="container fade-in-section">
       <p>
         While Red Hat has partnered with Synegen to create and open source the
-        Open Learning Platform, this is not a supported Red Hat product. For
-        more information or support on this platform please...[Direct them back
-        to Synegen site for Totara Learn subscription and/or advanced
-        assistance.]
+        Open Learning Platform, this is not a supported Red Hat product.
       </p>
     </section>
   </Content>
