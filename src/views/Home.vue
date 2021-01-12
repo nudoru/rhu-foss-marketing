@@ -172,10 +172,11 @@
         across the globe to excel. Be open for learning in days —not weeks.
       </h1>
       <div class="flex-group-row-c">
-        <button class="success large" style="margin-right: 2rem;">
+        <a href="https://www.synegen.com/open-learning-platform"><button class="success large" style="margin-right: 2rem;" >
           Get started
-        </button>
-        <button class="large secondary">Demo</button>
+        </button></a>
+        <a href="https://openlearningplatform.org/demo">
+        <button class="large secondary">Demo</button></a>
       </div>
     </section>
     <section class="container fade-in-section">
