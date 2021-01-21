@@ -1,10 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
-import Typography from '../views/Typography';
-import VueComponents from '../views/VueComponents';
-import Components from '../views/Components';
-import Forms from '../views/Forms';
 
 Vue.use(VueRouter);
 
@@ -15,29 +11,9 @@ const routes = [
     component: Home,
     glyph: 'fas fa-home',
     meta: {
-      title: 'IMA Home page',
+      title: 'Open Learning Platform',
     },
-  },
-  {
-    path: '/typography',
-    name: 'Typography',
-    component: Typography,
-  },
-  {
-    path: '/vuecomponents',
-    name: 'Vue Comp',
-    component: VueComponents,
-  },
-  {
-    path: '/components',
-    name: 'HTML Comp',
-    component: Components,
-  },
-  {
-    path: '/forms',
-    name: 'Forms',
-    component: Forms,
-  },
+  }
 ];
 
 const router = new VueRouter({

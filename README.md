@@ -1,8 +1,12 @@
-# RHU VueJS Starter
+# Open Learning Platform Marketing Site
 
-Tweaking styles and learning how to use Vue at the same time!
+The Open Learning Platform, an open source learning experience platform (LXP) solution that helps learning teams achieve both freedom to learn and freedom to innovate.
 
-# Vue CLI stuff ...
+A learning experience platform (LXP) provides a personalized, online learning experience for users, typically employees at large enterprises. It consolidates disparate learning resources into a single portal. These days, learning can happen anywhere and in many forms. An LXP helps employees discover learning opportunities, offers ways to enhance them, and manages all their learning.
+
+Visit https://openlearningplatform.org/
+
+# Building
 
 ## Project setup
 
@@ -21,22 +25,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-## TODOs
-
-- card, icon - no outline, but white
-- card, header move light/dark from h1 to header
-- form aligned message shouldn't be full width
-- badge component
-- remove checkbox and switch?
-- responsive header nav
-- grid?
-- component/effect - card or tile image that zooms on hover
-- "shine" effect on hover?
-- loading animation
-- Implement a modular scale https://www.codementor.io/@ricardozea/100-responsive-typography-system-using-a-modular-scale-s5rhft58g
