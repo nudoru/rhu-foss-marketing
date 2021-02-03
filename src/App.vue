@@ -7,9 +7,9 @@
         <span v-html="logo" class="svg-logo"></span>
       </span>
       <span class="end">
-        <a href="https://www.synegen.com/open-learning-platform#start">
+        <a href="https://www.synegen.com/open-learning-platform#start" target="_blank">
         <button class="success" style="margin-right: 1rem;">Get started</button></a>
-        <a href="https://openlearningplatform.org/demo">
+        <a href="https://openlearningplatform.org/demo"  target="_blank">
         <button class="secondary">Demo</button></a>
       </span>
     </Header>

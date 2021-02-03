@@ -1,7 +1,7 @@
 <script type="text/jsx">
 
 const cls = context => [
-  'feature-card',
+  'feature-card-simple',
   context.data.class ? context.data.class : '',
   context.data.staticClass ? context.data.staticClass : ''
 ].join(' ');
