@@ -67,7 +67,7 @@
             <a href="https://www.totaralearning.com/customer-stories/red-hat"
               >2019 Totara Best Technology and Media project award</a
             >, was created in a Red Hat-Synegen partnership. Proving that
-            innovation drives collaboration.
+            open collaboration drives innovation.
           </blockquote>
         </div>
       </div>
