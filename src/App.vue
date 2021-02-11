@@ -10,7 +10,9 @@
         <a href="https://www.synegen.com/open-learning-platform#start" target="_blank">
         <button class="success" style="margin-right: 1rem;">Get started</button></a>
         <a href="https://openlearningplatform.org/demo"  target="_blank">
-        <button class="secondary">Demo</button></a>
+        <button class="secondary" style="margin-right: 1rem;">Demo</button></a>
+        <a href="https://github.com/openlearningplatformlxp/lxp"  target="_blank">
+        <button class="primary"><i class="fab fa-github" style="margin-right: .25rem;"></i>GitHub</button></a>
       </span>
     </Header>
     <Home />
